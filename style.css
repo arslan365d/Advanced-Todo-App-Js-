@@ -1,0 +1,174 @@
+@font-face {
+  font-family: gilroy;
+  src: url(./Gilroy-Bold.ttf);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background: #8360c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+display: flex;
+justify-content: center;
+align-items: start;
+margin-top: 80px;
+}
+.todo__container{
+  width: 500px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Background blur effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+  border-radius: 10px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.todo__container h1{
+  font-size: 2.5rem;
+  padding-block: 15px;
+  color: skyblue;
+}
+.input__container{
+  width: 100%;
+  display: flex;
+  justify-content :center;
+  gap: 5px;
+  padding-block: 5px;
+}
+.input__container input{
+  padding-block:10px;
+  padding-inline: 8px;
+  border: 0;
+  border-radius: 10px;
+  width: 60%;
+  font-weight: 200;
+}
+.input__container button{
+  background-color: #8360c3;
+  padding-inline: 30px;
+  padding-block: 10px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+}
+.todos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 15px;
+}
+.todo{
+  width: 80%;
+  padding: 10px;
+  border: 0.2px solid white;
+}
+.todo p{
+  text-align: right;
+  padding-top: 5px;
+}
+.todo__div{
+  display: flex;
+  justify-content: space-between;
+}
+.todo__div button{
+  background-color: #8360c3;
+  padding-inline: 18px;
+  padding-block: 10px;
+  border-radius: 25px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+}
+.modal{
+  background-color: white;
+  position: fixed;
+  top: 10px;
+  right: -100%;
+  z-index: 5;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 20px;
+  transition: right 0.5s ease;
+}
+
+.show{
+  right: 10px;
+}
+.editModalDiv{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  backdrop-filter: blur(10px);
+  display: none;
+}
+.showEditModal{
+  display: block;
+}
+.editModal{
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-40%);
+  z-index: 10;
+  background-color: white;
+  width: 400px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.editModal button{
+  background-color: #8360c3;
+  padding-inline: 30px;
+  padding-block: 10px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+}
+#editTodo{
+ padding: 5px;
+ width: 250px;
+}
+.editIdDiv{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width:400px) {
+  .todo{
+    width: 100%;
+  }
+  .editModal{
+    width: 100%;
+    height: 200px;
+  }
+  
+  .editModal button{
+    margin-top: 10px;
+  }
+  #modalText{
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Popup -->
+  <div class="modal">
+    <h2 id="modalText">Todo Added</h2>
+  </div>
+  <!-- Edit Modal -->
+  <div class="editModalDiv">
+    <div class="editModal">
+      <h1>Edit your Todo</h1>
+      <div class="editIdDiv">
+        <p>ID:</p>
+        <p class="editTodoIDPlace"></p>
+      </div>
+      <div>
+        <input type="text" placeholder="Edit Todo" id="editTodo">
+        <button id="editModalBtn">Edit</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="todo__container">
+    <h1>Todo App</h1>
+    <div class="input__container">
+      <input type="text" placeholder="Enter your todo here..." id="todoInput">
+      <button id="addTodo">Add</button>
+    </div>
+    <div class="todos">
+    </div>
+  </div>
+
+
+  <template id="tempOfTodo">
+    <div class="todo">
+      <div class="todo__div">
+        <h3 id="content"></h3>
+        <div>
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </div>
+      </div>
+      <p id="date">12/12/2025: 12:05:00</p>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
